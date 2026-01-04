@@ -29,15 +29,21 @@
   object-position: center;
   display: block;
 
-  -webkit-mask-image: radial-gradient(circle at center,
-    rgba(0,0,0,1) 68%,
-    rgba(0,0,0,0) 92%);
-  mask-image: radial-gradient(circle at center,
-    rgba(0,0,0,1) 68%,
-    rgba(0,0,0,0) 92%);
-
-  filter: drop-shadow(0 0 24px rgba(0,0,0,0.12));
+  /* Feather רק בצדדים (לא למעלה/למטה) */
+  -webkit-mask-image: linear-gradient(to right,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,1) 6%,
+    rgba(0,0,0,1) 94%,
+    rgba(0,0,0,0) 100%
+  );
+  mask-image: linear-gradient(to right,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,1) 6%,
+    rgba(0,0,0,1) 94%,
+    rgba(0,0,0,0) 100%
+  );
 }
+
 
   </style>
 </head>
@@ -45,6 +51,7 @@
   <img src="astrapia_site_soon_banner.png" alt="ASTRAPIA Coming Soon" />
 </body>
 </html>
+
 
 
 
