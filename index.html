@@ -7,23 +7,30 @@
   <style>
     html, body { height: 100%; margin: 0; }
     body{
-      display: grid;
+      display: grid; 
       place-items: center;
       overflow: hidden;
 
-      /* רקע "המשך" נקי במקום בלר */
-      background: linear-gradient(90deg, #2fd6cf 0%, #6b63d7 100%);
-    }
+      /* גרדיאנט מותאם יותר לקצוות של הבאנר */
+      background: linear-gradient(90deg,
+        #23cedb 0%,
+        #42b6d2 55%,
+        #5c7bdf 100%
+      );
 
+      /* גיבוי כדי שלא יצוץ “פס” בקצה בגלל עיגול פיקסלים */
+      background-color: #5c7bdf;
+    }
+    
     img{
       width: 100vw;
       height: 100vh;
-      object-fit: contain;     /* מציג את כל התמונה */
+      object-fit: contain;
       object-position: center;
       display: block;
-
-      /* נותן תחושה שהבאנר "יושב" על הרקע בלי פסים */
-      filter: drop-shadow(0 18px 40px rgba(0,0,0,0.25));
+    
+      /* אם עדיין מרגיש “שוליים מודגשים”, תחליש/תכבה את זה */
+      filter: drop-shadow(0 14px 30px rgba(0,0,0,0.18));
     }
   </style>
 </head>
@@ -31,3 +38,4 @@
   <img src="astrapia_site_soon_banner.png" alt="ASTRAPIA Coming Soon" />
 </body>
 </html>
+
