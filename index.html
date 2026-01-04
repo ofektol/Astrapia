@@ -22,27 +22,33 @@
       background-color: #5c7bdf;
     }
     
-   img{
+  img{
   width: 100vw;
   height: 100vh;
   object-fit: contain;
   object-position: center;
   display: block;
 
-  /* Feather רק בצדדים (לא למעלה/למטה) */
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+
+  /* Feather לשמאל + ימין בלבד */
   -webkit-mask-image: linear-gradient(to right,
     rgba(0,0,0,0) 0%,
-    rgba(0,0,0,1) 6%,
-    rgba(0,0,0,1) 94%,
+    rgba(0,0,0,1) 10%,
+    rgba(0,0,0,1) 90%,
     rgba(0,0,0,0) 100%
   );
   mask-image: linear-gradient(to right,
     rgba(0,0,0,0) 0%,
-    rgba(0,0,0,1) 6%,
-    rgba(0,0,0,1) 94%,
+    rgba(0,0,0,1) 10%,
+    rgba(0,0,0,1) 90%,
     rgba(0,0,0,0) 100%
   );
 }
+
 
 
   </style>
@@ -51,6 +57,7 @@
   <img src="astrapia_site_soon_banner.png" alt="ASTRAPIA Coming Soon" />
 </body>
 </html>
+
 
 
 
